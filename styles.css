@@ -1,0 +1,7 @@
+#carousel-wrapper>.carousel-inner {
+  max-height: 400px;
+}
+
+#carousel-wrapper>.carousel-inner img {
+  width: 100%;
+}
