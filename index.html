@@ -232,55 +232,132 @@
     </footer>
     <!-- /Footer -->
 
-    <!-- Form  -->
-    <form
-      action="/pay"
-      method="post"
-      id="payment-form"
-      onsubmit="purchaseProduct(event)"
+    <!-- Button trigger modal -->
+    <button
+      type="button"
+      class="btn btn-primary"
+      data-toggle="modal"
+      data-target="#purchaseProductModal"
     >
-      <label for="email">Email:</label>
-      <input
-        type="text"
-        id="email"
-        name="email"
-        placeholder="please enter your email"
-      />
-      <label for="card_number">Card Number</label>
-      <input
-        type="text"
-        maxlength="16"
-        id="card_number"
-        name="card_number"
-        placeholder="card number"
-      />
-      <label for="card_month">Card Expiration Month:</label>
-      <input
-        type="text"
-        maxlength="2"
-        id="card_month"
-        name="card_month"
-        placeholder="card expiration month"
-      />
-      <label for="card_year">Card Expiration Year</label>
-      <input
-        type="text"
-        maxlength="4"
-        id="card_year"
-        name="card_year"
-        placeholder="card expiration year"
-      />
-      <label for="cvc">CVC number:</label>
-      <input
-        type="text"
-        maxlength="4"
-        id="cvc"
-        name="cvc"
-        placeholder="cvc number"
-      />
-      <button type="submit">Purchase</button>
-    </form>
-    <!-- /Form -->
+      Launch Product modal
+    </button>
+    <!-- /Button trigger modal -->
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="purchaseProductModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="purchaseProductModal"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="purchaseProductLabel">
+              Purchase Product
+            </h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <!-- Form  -->
+          <form
+            action="/pay"
+            method="post"
+            id="payment-form"
+            class="form"
+            onsubmit="purchaseProduct(event)"
+          >
+            <div class="modal-body">
+              <!-- Product Details Jumbo Tron -->
+              <div class="jumbotron jumbotron-fluid">
+                <div class="container">
+                  <h1 class="display-4" id="productItemTitle">Product Title</h1>
+                  <p class="lead" id="productItemDescription">
+                    Product description
+                  </p>
+                  <p class="lead">Product Price</p>
+                </div>
+              </div>
+              <!-- /Product Details Jumbo Tron -->
+              <div class="form-group">
+                <label for="email">Email:</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="email"
+                  name="email"
+                  placeholder="please enter your email"
+                />
+              </div>
+              <div class="form-group">
+                <label for="card_number">Card Number</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  maxlength="16"
+                  id="card_number"
+                  name="card_number"
+                  placeholder="card number"
+                />
+              </div>
+              <div class="form-group">
+                <label for="card_month">Card Expiration Month:</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  maxlength="2"
+                  id="card_month"
+                  name="card_month"
+                  placeholder="card expiration month"
+                />
+              </div>
+              <div class="form-group">
+                <label for="card_year">Card Expiration Year</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  maxlength="4"
+                  id="card_year"
+                  name="card_year"
+                  placeholder="card expiration year"
+                />
+              </div>
+              <div class="form-group">
+                <label for="cvc">CVC number:</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  maxlength="4"
+                  id="cvc"
+                  name="cvc"
+                  placeholder="cvc number"
+                />
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-dismiss="modal"
+              >
+                Close
+              </button>
+              <button type="submit" class="btn btn-primary">Purchase</button>
+            </div>
+          </form>
+          <!-- /Form -->
+        </div>
+      </div>
+    </div>
+    <!-- /Modal -->
 
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
