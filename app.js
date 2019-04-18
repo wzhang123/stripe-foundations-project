@@ -3,3 +3,7 @@ function purchaseProduct(event) {
   console.log(event);
   alert('hello world');
 }
+
+function openProductModal() {
+  $('#purchaseProductModal').modal('show')
+}
