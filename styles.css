@@ -12,3 +12,11 @@
   padding: 25px;
   font-size: 1.5em;
 }
+
+.card-body {
+  color: #FF5733
+}
+
+body {
+  background: #0f44f175;
+}
